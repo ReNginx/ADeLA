@@ -30,7 +30,7 @@ Our dataset can be downloaded [here](https://drive.google.com/file/d/1Rv_-gecVdh
 
 #### Model weight
 
-The trained ADeLA weight can be found [here](https://drive.google.com/file/d/1hoBPGHJCjbNnWQoEq4cyRWWWmAd1QRcx/view?usp=sharing). The initialization weight for the DeepLab training can be downloaded [here]('http://vllab.ucmerced.edu/ytsai/CVPR18/DeepLab_resnet_pretrained_init-f81d91e8.pth).
+The trained ADeLA weight can be found [here](https://drive.google.com/file/d/1hoBPGHJCjbNnWQoEq4cyRWWWmAd1QRcx/view?usp=sharing). The initialization weight for the DeepLab training can be downloaded [here](http://vllab.ucmerced.edu/ytsai/CVPR18/DeepLab_resnet_pretrained_init-f81d91e8.pth).
 
 Please download and put these two checkpoints in the `./ckpt` folder.
 
