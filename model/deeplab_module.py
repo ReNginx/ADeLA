@@ -83,14 +83,10 @@ class Deeplab(pl.LightningModule):
                 self.logger.experiment.add_image(f'{mode}_vis', grid, log_step)
 
         if mode != 'train':
+            if mode == 'test' or self.need_test_current_epoch:
+                self.iou(pred_label, hard_label)
             dummy_loss = torch.Tensor(0).to(pred_label.device)
             self.log(f'{mode}_loss', dummy_loss)
-
-            if mode == 'test' or self.need_test_current_epoch:
-                self.iou = self.iou.cpu()
-                pred_label_cpu = pred_label.cpu()
-                hard_label_cpu = hard_label.cpu()
-                self.iou(pred_label_cpu, hard_label_cpu)
             return dummy_loss
 
         if mode == 'train':
