@@ -1,0 +1,19 @@
+python main.py --dataset_root ./data/mp3d_multiview \
+        --test_dataset_root ./data/mp3d_multiview \
+        --train_list ./data/mp3d_multiview/train.txt \
+        --test_list ./data/mp3d_multiview/test.txt \
+        --label_root ./logs/ADeLA/stage2/results/ \
+        --gpus '0,' \
+        --init_lr 7.5e-5 \
+        --log_every_n_steps 2 \
+        --log_image_every_n_steps 1000 \
+        --model deeplab \
+        --dataset_type modality \
+        --batch_size 6 \
+        --max_epoch 25 \
+        --expr_name ADeLA \
+        --version stage3-$1 \
+        --angle $1 \
+        --accelerator ddp \
+        --test_period 5 \
+        --pretrain ./ckpt/DeepLab_resnet_pretrained_init-f81d91e8.pth

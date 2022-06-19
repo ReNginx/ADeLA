@@ -1,0 +1,24 @@
+python main.py --dataset_root ./data/mp3d_multiview \
+        --test_dataset_root ./data/mp3d_multiview \
+        --train_list ./data/mp3d_multiview/train.txt \
+        --test_list ./data/mp3d_multiview/test.txt \
+        --gpus -1 \
+        --init_lr 1e-4 \
+        --log_every_n_steps 2 \
+        --log_image_every_n_steps 1000 \
+        --model adela \
+        --dataset_type multiview \
+        --batch_size 2 \
+        --shuffle \
+        --max_epoch 40 \
+        --expr_name ADeLA \
+        --version stage1 \
+        --source_angle 0 \
+        --target_angles 10 20 30 40 50 60 70 80 \
+        --frnt_rng 1 \
+        --btom_rng 1 \
+        --accelerator ddp \
+        --limit 15 \
+        --step 1 \
+        --n_layers 8 \
+        --test_period 5

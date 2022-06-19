@@ -1,0 +1,22 @@
+python main.py --dataset_root ./data/mp3d_multiview \
+        --test_dataset_root ./data/mp3d_multiview \
+        --test_list ./scripts/demo.txt \
+        --gpus -1 \
+        --init_lr 1e-4 \
+        --log_every_n_steps 2 \
+        --log_image_every_n_steps 1000 \
+        --model adela \
+        --dataset_type multiview \
+        --batch_size 1 \
+        --expr_name ADeLA \
+        --version demo \
+        --source_angle 0 \
+        --target_angles 30 \
+        --frnt_rng 1 \
+        --btom_rng 1 \
+        --accelerator ddp \
+        --limit 15 \
+        --step 1 \
+        --n_layers 8 \
+        --mode test \
+        --ckpt_path ./ckpt/adela.ckpt
