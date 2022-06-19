@@ -1,7 +1,5 @@
 # ADeLA: Automatic Dense Labeling with Attention for Viewpoint Shift in Semantic Segmentation 
 
-[toc]
-
 ## Introduction
 
 This is the official implementation of our [ADeLA](https://openaccess.thecvf.com/content/CVPR2022/html/Ren_ADeLA_Automatic_Dense_Labeling_With_Attention_for_Viewpoint_Shift_in_CVPR_2022_paper.html) paper for CVPR 2022
@@ -10,7 +8,7 @@ We describe a method to deal with performance drop in semantic segmentation caus
 
 Below shows a comparison of our method and other top-performing methods in transferring labels from source view to target views.
 
-![Qualitative comparison](/Users/renginx/Program/ADeLA/results/Qualitative comparison.png)
+![Qualitative comparison](./images/cmp.png)
 
 ## Usage
 
@@ -44,7 +42,7 @@ After running the demo script, checkout results at `./logs/ADeLA/demo/results`
 
 ### Steps to reproduce the results
 
-![architecture3](/Users/renginx/Downloads/architecture3.png)
+![architecture3](./images/arch.png)
 
 As described in our paper, the whole pipeline contains 3 steps.
 
